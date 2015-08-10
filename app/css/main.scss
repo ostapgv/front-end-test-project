@@ -2,5 +2,66 @@
 // endbower
 
 body:before {
-  content: "I'm at 'app/css/main.scss";
+  //content: "I'm at 'app/css/main.scss";
+}
+
+body{
+  background-color : #EAE2D7;
+  margin: 15px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.sidebar{
+  background-color : #FFF;
+  width: 300px;
+  height: 1%;
+  border-radius: 8px;
+  behavior: url(../pie/PIE.htc);
+ 
+  .sidebar-heading{
+    color: #E61052;
+    size: 12pt;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  
+  .sidebar-dotted{
+    border: 1px dotted #D9CBB6; 
+    border-style: none none dotted; 
+    color: #fff; 
+    background-color: #fff;
+  }
+  
+  .sidebar-content{
+    padding: 0px 10px 10px 10px; 
+    color: #97866F;
+  }
+    
+  img{
+    height: 22px;
+    vertical-align: middle;
+  }
+  
+  span, a:link{
+    color: #97866F;
+    text-decoration: none;
+  }
+  
+  span{
+    padding-right: 10px;
+  }
+  
+  ul {
+    list-style-image: url("/images/sprites/sprite_ul.png");
+    margin: 0px;
+  }
+  
+  li{
+    margin-left: -20px;
+    padding: 5px;
+  }
+  
 }
