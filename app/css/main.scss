@@ -86,9 +86,17 @@ $full_width : 600px;
   behavior: url(/pie/PIE.htc);
   
   & .gallery-heading{
-    background-color : $background-header-color;
+    background-color : $background-header-color;    
   }
   
+  & .gallery-heading-left{
+    border-top-left-radius: 8px;
+  }
+  
+  & .gallery-heading-right{
+    border-top-right-radius: 8px;
+  }
+    
   & .inline{
     float: left;
     width: $full_width / 2;
