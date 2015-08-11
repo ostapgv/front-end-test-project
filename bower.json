@@ -4,6 +4,8 @@
   "dependencies": {
     "modernizr": "~2.8.3",
     "normalize-css": "~3.0.2"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.6.1"
   }
 }
-

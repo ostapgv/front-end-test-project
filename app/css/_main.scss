@@ -5,23 +5,24 @@ body:before {
   //content: "I'm at 'app/css/main.scss";
 }
 
+$header_color: #E61052;
+$content_color: #97866F;
+$background-color: #FFF;
+$dottet_border_color: #D9CBB6;
+$body-background-color: #EAE2D7;
+
 body{
-  background-color : #EAE2D7;
-  margin: 15px;
+  background-color : $body-background-color;
+  padding: 10px;
 }
 
 .bold{
   font-weight: bold;
 }
 
-$header_color: #E61052;
-$content_color: #97866F;
-$background-color: #FFF;
-$dottet_border_color: #D9CBB6;
-
 .sidebar{
   background-color : $background-color;
-  width: 300px;
+  min-width: 300px;
   border-radius: 8px;
   behavior: url(/pie/PIE.htc);
  
