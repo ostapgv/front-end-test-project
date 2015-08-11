@@ -14,30 +14,34 @@ body{
   font-weight: bold;
 }
 
+$header_color: #E61052;
+$content_color: #97866F;
+$background-color: #FFF;
+$dottet_border_color: #D9CBB6;
+
 .sidebar{
-  background-color : #FFF;
+  background-color : $background-color;
   width: 300px;
-  height: 1%;
   border-radius: 8px;
-  behavior: url(../pie/PIE.htc);
+  behavior: url(/pie/PIE.htc);
  
   .sidebar-heading{
-    color: #E61052;
+    color: $header_color;
     size: 12pt;
     padding-left: 10px;
     padding-top: 20px;
   }
   
   .sidebar-dotted{
-    border: 1px dotted #D9CBB6; 
+    border: 1px dotted $dottet_border_color; 
     border-style: none none dotted; 
-    color: #fff; 
-    background-color: #fff;
+    color: $background-color; 
+    background-color: $background-color;
   }
   
   .sidebar-content{
     padding: 0px 10px 10px 10px; 
-    color: #97866F;
+    color: $content_color;
   }
     
   img{
@@ -45,13 +49,13 @@ body{
     vertical-align: middle;
   }
   
-  span, a:link{
-    color: #97866F;
-    text-decoration: none;
-  }
-  
   span{
     padding-right: 10px;
+    
+    &, a:link{
+      color: $content_color;
+      text-decoration: none;
+    }
   }
   
   ul {
@@ -64,4 +68,29 @@ body{
     padding: 5px;
   }
   
+}
+
+$header_color: #FFF;
+$background-header-color: #E61052;
+$content_color: #97866F;
+$background-color: #FFF;
+$dottet_border_color: #D9CBB6;
+
+$full_width : 600px;
+
+.gallery{
+  background-color : $background-color;
+  border-radius: 8px;
+  width: $full_width;
+  height: 200px;
+  behavior: url(/pie/PIE.htc);
+  
+  & .gallery-heading{
+    background-color : $background-header-color;
+  }
+  
+  & .inline{
+    float: left;
+    width: $full_width / 2;
+  }
 }
