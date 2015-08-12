@@ -1,0 +1,72 @@
+.sidebar-right-aside{
+  min-width: $sidebar-min-width;
+  float: right;
+
+  // Changing float to the "left" if screen width is less than $sidebar-min-width + paddings
+  @include breakpoint(max-width $sidebar-min-width + 2*$sidebar-padding) {
+    float: left;
+  } 
+
+  // 100% width in small devices
+  @include breakpoint($min-breakpoint) {
+    width: 100%;
+    //background-color: red;
+  } 
+
+  // fixed width in tablets asnd desctops
+  @include breakpoint($max-breakpoint) {
+    width: $max-breakpoint - 2*$sidebar-padding;
+    //background-color: blue;
+  } 
+
+}
+
+.sidebar{
+  background-color : $background-color;
+  border-radius: 8px;
+  behavior: url(/pie/PIE.htc);
+  
+  .sidebar-heading{
+    color: $header-color;
+    size: 12pt;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+  
+  .sidebar-dotted{
+    border: 1px dotted $dottet-border-color; 
+    border-style: none none dotted; 
+    color: $background-color; 
+    background-color: $background-color;
+  }
+  
+  .sidebar-content{
+    padding: 0px 10px 10px 10px; 
+    color: $content-color;
+  }
+    
+  img{
+    height: 22px;
+    vertical-align: middle;
+  }
+  
+  span{
+    padding-right: 10px;
+    
+    &, a:link{
+      color: $content-color;
+      text-decoration: none;
+    }
+  }
+  
+  ul {
+    list-style-image: url("/images/sprites/sprite_ul.png");
+    margin: 0px;
+  }
+  
+  li{
+    margin-left: -20px;
+    padding: 5px;
+  }
+
+}

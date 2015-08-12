@@ -1,105 +1,16 @@
 // bower:scss
 // endbower
 
-body:before {
+//body:before {
   //content: "I'm at 'app/css/main.scss";
-}
+//}
 
-$header_color: #E61052;
-$content_color: #97866F;
-$background-color: #FFF;
-$dottet_border_color: #D9CBB6;
-$body-background-color: #EAE2D7;
 
 body{
   background-color : $body-background-color;
-  padding: 10px;
+  padding: $sidebar-padding;
 }
 
 .bold{
   font-weight: bold;
-}
-
-.sidebar{
-  background-color : $background-color;
-  min-width: 300px;
-  border-radius: 8px;
-  behavior: url(/pie/PIE.htc);
- 
-  .sidebar-heading{
-    color: $header_color;
-    size: 12pt;
-    padding-left: 10px;
-    padding-top: 20px;
-  }
-  
-  .sidebar-dotted{
-    border: 1px dotted $dottet_border_color; 
-    border-style: none none dotted; 
-    color: $background-color; 
-    background-color: $background-color;
-  }
-  
-  .sidebar-content{
-    padding: 0px 10px 10px 10px; 
-    color: $content_color;
-  }
-    
-  img{
-    height: 22px;
-    vertical-align: middle;
-  }
-  
-  span{
-    padding-right: 10px;
-    
-    &, a:link{
-      color: $content_color;
-      text-decoration: none;
-    }
-  }
-  
-  ul {
-    list-style-image: url("/images/sprites/sprite_ul.png");
-    margin: 0px;
-  }
-  
-  li{
-    margin-left: -20px;
-    padding: 5px;
-  }
-  
-}
-
-$header_color: #FFF;
-$background-header-color: #E61052;
-$content_color: #97866F;
-$background-color: #FFF;
-$dottet_border_color: #D9CBB6;
-
-$full_width : 600px;
-
-.gallery{
-  background-color : $background-color;
-  border-radius: 8px;
-  width: $full_width;
-  height: 200px;
-  behavior: url(/pie/PIE.htc);
-  
-  & .gallery-heading{
-    background-color : $background-header-color;    
-  }
-  
-  & .gallery-heading-left{
-    border-top-left-radius: 8px;
-  }
-  
-  & .gallery-heading-right{
-    border-top-right-radius: 8px;
-  }
-    
-  & .inline{
-    float: left;
-    width: $full_width / 2;
-  }
 }

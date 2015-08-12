@@ -1,6 +1,7 @@
 @import "../../bower_components/breakpoint-sass/stylesheets/breakpoint.scss";
 
 @import "variables";
-@import "mixins";
-@import "sidebar-test";
+@import "breakpoints";
 @import "main";
+@import "sidebar";
+//@import "gallery";
