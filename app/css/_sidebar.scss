@@ -26,39 +26,39 @@
   border-radius: 8px;
   behavior: url(/pie/PIE.htc);
   
-  .sidebar-heading{
+  & .sidebar-heading{
     color: $header-color;
     size: 12pt;
     padding-left: 10px;
     padding-top: 20px;
   }
   
-  .sidebar-dotted{
+  & .sidebar-dotted{
     border: 1px dotted $dottet-border-color; 
     border-style: none none dotted; 
     color: $background-color; 
     background-color: $background-color;
   }
   
-  .sidebar-content{
+  & .sidebar-content{
     padding: 0px 10px 10px 10px; 
     color: $content-color;
-  }
-    
-  img{
-    height: 22px;
-    vertical-align: middle;
-  }
   
-  span{
-    padding-right: 10px;
-    
-    &, a:link{
+    & a{
       color: $content-color;
       text-decoration: none;
     }
-  }
+
+    & img{
+      height: 22px;
+      vertical-align: middle;
+    }
   
+    & span{
+      padding-right: 10px;
+    }
+  }// .sidebar-content
+      
   ul {
     list-style-image: url("/images/sprites/sprite_ul.png");
     margin: 0px;
@@ -68,5 +68,4 @@
     margin-left: -20px;
     padding: 5px;
   }
-
-}
+}//.sidebar

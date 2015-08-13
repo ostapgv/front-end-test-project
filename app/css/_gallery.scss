@@ -5,59 +5,88 @@ $content-color: #97866F;
 $background-color: #FFF;
 $dottet-border-color: #D9CBB6;
 $min-width : 300px;
+$gallery-container-height: 250px;
 $gallery-heading-height: 50px;
 $gallery-padding: 10px;
 $gallery-border-radius: 8px;
+
+$gallery-img-margin: 10px;
+$gallery-img-width: 98px;
+$gallery-img-border-color: #EAE1D4;
+$gallery-link-color: $background-header-color;
 
 
 .gallery{
   min-width: $min-width;
   behavior: url(/pie/PIE.htc);
-  
-  & .gallery-heading{
-    background-color : $background-header-color;
-    height: $gallery-heading-height; 
-    color: $header-color;
-    padding-left: $gallery-padding;
-    padding-top: 30px;
-    
-    @include breakpoint($min-breakpoint) {
-      border-top-left-radius: $gallery-border-radius;
-      border-top-right-radius: $gallery-border-radius;
-    } 
-  }
-  
-  & .gallery-heading-left{
-    border-top-left-radius: $gallery-border-radius;
-  }
-  
-  & .gallery-heading-right{
-    border-top-right-radius: $gallery-border-radius;
-  }
-  
   & .gallery-section{
     background-color : $background-color;
     border-radius: $gallery-border-radius;
-    
-    & .gallery-content{
-      padding: $gallery-padding;
-    }
-    
-  
+      
     @include breakpoint($max-breakpoint) {
       width: $max-breakpoint/2 - $gallery-padding;
       float: left;
     } 
-  }
+
+    & .gallery-heading-left{
+      border-top-left-radius: $gallery-border-radius;
+    }
+    
+    & .gallery-heading-right{
+      border-top-right-radius: $gallery-border-radius;
+    }
+
+    & .gallery-heading{
+      background-color : $background-header-color;
+      height: $gallery-heading-height; 
+      color: $header-color;
+      padding-left: $gallery-padding;
+      padding-top: 30px;
+      
+      @include breakpoint($min-breakpoint) {
+        border-top-left-radius: $gallery-border-radius;
+        border-top-right-radius: $gallery-border-radius;
+      } 
+    }
+
+    & .gallery-container{
+      padding: $gallery-padding;
+      height: $gallery-container-height;
+      
+      & .gallery-img-container{
+        float: left;
+        
+        & img{
+          border: 1px solid $gallery-img-border-color;
+          margin: $gallery-img-margin;
+        }        
+      }
+      
+      & .gallery-content {
+        margin-left: $gallery-img-width + 2*$gallery-img-margin;
+        
+        & .gallery-details a{
+          color: $gallery-link-color;
+          text-decoration: none;
+        }
+        
+      }//.gallery-content
+      
+    }//.gallery-container
+    
+    &.gallery-section-left{
+      @include breakpoint($max-breakpoint) {
+        border-bottom-right-radius: 0px;
+      }
+    }
+
+    &.gallery-section-right{
+      @include breakpoint($max-breakpoint) {
+        border-bottom-left-radius: 0px;
+        border-left: 1px dotted $dottet-border-color; 
+      }
+    }
   
-  // Test block value
-  .gallery-content{
-    height: 300px;
-  }
-  
-   
-  //& .inline{
-  //  float: left;
-  //  width: $min-width / 2;
-  //}
-}
+  }//.gallery-section
+
+}//.gallery
