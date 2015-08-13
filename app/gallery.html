@@ -21,6 +21,10 @@
     <!-- build:js js/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!--user's links-->
+    <link rel="stylesheet" href="/bower_components/jquery-colorbox/example1/colorbox.css" />
+    
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -34,12 +38,21 @@
       <div>test content4</div>     
     </div>
     -->
+    <a class="galler" href="/images/sprites/sprite_news1.png"></a>
+    <a class="galler" href="/images/sprites/sprite_news2.png"></a>
+    <a class="galler" href="/images/sprites/sprite_news3.png"></a>
+    <a class="galler" href="/images/sprites/sprite_news4.png"></a>
+    
     <div class="gallery">
       <div class="gallery-section gallery-section-left">
         <div class="gallery-heading gallery-heading-left">X-PLOSION PRODUCTS</div>
         <div class="gallery-container">
           <p class="bold">We say NO to artificial flavors</p>
-          <div class="gallery-img-container"><img src="/images/sprites/sprite_news1.png" alt="some news"/></div>
+          <div class="gallery-img-container">
+            <a href="/images/sprites/sprite_news1.png" class="gallery-img-group">
+              <img src="/images/sprites/sprite_news1.png" alt="some news"/>
+            </a>
+          </div>
           <div class="gallery-content">
             <p>Convert the following parts of X-Plosion web site to HTML/CSS/JS. Do not code the whole website, only the following 2 parts from the home page!</p>
             <div class="gallery-details">
@@ -49,7 +62,11 @@
         </div>
         <div class="gallery-container">
           <p class="bold">New flavor added</p>
-          <div class="gallery-img-container"><img src="/images/sprites/sprite_news3.png" alt="some news"/></div>
+          <div class="gallery-img-container">
+            <a href="/images/sprites/sprite_news3.png" class="gallery-img-group">
+              <img src="/images/sprites/sprite_news3.png" alt="some news"/>
+            </a>
+          </div>
           <div class="gallery-content">
             <p>Convert the following parts of X-Plosion web site to HTML/CSS/JS. Do not code the whole website, only the following 2 parts from the home page!</p>
             <div class="gallery-details">
@@ -64,7 +81,11 @@
         <div class="gallery-heading gallery-heading-right">X-PLOSION EXPANSION</div>
         <div class="gallery-container">
           <p class="bold">X-Plosion is a hit in Japan</p>
-          <div class="gallery-img-container"><img src="/images/sprites/sprite_news2.png" alt="some news"/></div>
+          <div class="gallery-img-container">
+            <a href="/images/sprites/sprite_news2.png" class="gallery-img-group">
+              <img src="/images/sprites/sprite_news2.png" alt="some news"/>
+            </a>
+          </div>
           <div class="gallery-content">
             <p>Convert the following parts of X-Plosion web site to HTML/CSS/JS. Do not code the whole website, only the following 2 parts from the home page!</p>
             <div class="gallery-details">
@@ -74,7 +95,11 @@
         </div>
         <div class="gallery-container">
           <p class="bold">Danish elder hooked on X-Plosion</p>
-          <div class="gallery-img-container"><img src="/images/sprites/sprite_news4.png" alt="some news"/></div>
+          <div class="gallery-img-container">
+            <a href="/images/sprites/sprite_news4.png" class="gallery-img-group last">
+              <img src="/images/sprites/sprite_news4.png" alt="some news"/>
+            </a>
+          </div>
           <div class="gallery-content">
             <p>Convert the following parts of X-Plosion web site to HTML/CSS/JS. Do not code the whole website, only the following 2 parts from the home page!</p>
             <div class="gallery-details">
@@ -96,11 +121,16 @@
 
     <!-- build:js js/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js js/main.js -->
     <script src="js/main.js"></script>
     <!-- endbuild -->
+    
+    <!--user's js files-->
+    <script src="/js/gallery.js"></script>
   </body>
 </html>
