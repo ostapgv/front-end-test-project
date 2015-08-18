@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "breakpoint-sass": "~2.6.1",
+    "jquery": "~2.1.4",
     "jquery-colorbox": "~1.6.3"
   }
 }

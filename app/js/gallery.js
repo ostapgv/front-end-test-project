@@ -21,9 +21,6 @@ $(document).bind("cbox_complete", function(){
 });
 
 $(document).bind("cbox_closed", function(){
+  $(this).unbind("cbox_complete");
   clearTimeout($(this).data().timeout_id);
 });
-
-//function s(){
-  
-//}
