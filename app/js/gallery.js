@@ -1,3 +1,4 @@
+/* global $ */
 $(function() {
     $("a.gallery-img-group").colorbox(
       { 
