@@ -8,7 +8,6 @@ $min-width : 300px;
 $gallery-container-height: 250px;
 $gallery-heading-height: 50px;
 $gallery-padding: 10px;
-$gallery-border-radius: 8px;
 
 $gallery-img-margin: 10px;
 $gallery-img-width: 98px;
@@ -16,49 +15,48 @@ $gallery-img-border-color: #EAE1D4;
 $gallery-link-color: $background-header-color;
 
 
-.gallery{
+.gallery {
     min-width: $min-width;
     
-  .gallery-section{
+  .gallery-section {
     background-color : $background-color;
-    @include border-radius-value($gallery-border-radius);
+    @include border-radius-value($border-radius);
       
     @include breakpoint($max-breakpoint) {
       width: $max-breakpoint/2 - $gallery-padding;
       float: left;
     } 
 
-    .gallery-heading-left{
-      // Top left border radius
-      @include border-radius-custom($gallery-border-radius, 0, 0, 0);
-    }
-    
-    .gallery-heading-right{
-      // Top left border radius
-      @include border-radius-custom(0, $gallery-border-radius, 0, 0);
-    }
-
-    .gallery-heading{
+    .gallery-heading {
       background-color : $background-header-color;
       height: $gallery-heading-height; 
       color: $header-color;
       padding-left: $gallery-padding;
       padding-top: 30px;
 
-      @include breakpoint($min-breakpoint) {
-        // Top left and top right border radius
-        @include border-radius-custom($gallery-border-radius, $gallery-border-radius, 0, 0);
-      } 
+      &.gallery-heading-left {
+        @include border-radius-custom($border-radius, $border-radius, 0, 0);
+        @include breakpoint($max-breakpoint) {
+          @include border-radius-custom($border-radius, 0, 0, 0);
+        }
+      }
+      
+      &.gallery-heading-right {
+        @include border-radius-custom($border-radius, $border-radius, 0, 0);
+        @include breakpoint($max-breakpoint) {
+          @include border-radius-custom(0, $border-radius, 0, 0);
+        }
+      }
     }
 
-    .gallery-container{
+    .gallery-container {
       padding: $gallery-padding;
       height: $gallery-container-height;
       
-      .gallery-img-container{
+      .gallery-img-container {
         float: left;
         
-        img{
+        img {
           border: 1px solid $gallery-img-border-color;
           margin: $gallery-img-margin;
         }        
@@ -67,7 +65,7 @@ $gallery-link-color: $background-header-color;
       .gallery-content {
         margin-left: $gallery-img-width + 2*$gallery-img-margin;
         
-        .gallery-details a{
+        .gallery-details a {
           color: $gallery-link-color;
           text-decoration: none;
         }
@@ -76,19 +74,19 @@ $gallery-link-color: $background-header-color;
       
     }//.gallery-container
     
-    &.gallery-section-left{
+    &.gallery-section-left {
       @include breakpoint($max-breakpoint) {
-        // Top and Bottom right border radius
-        @include border-radius-custom(0, $gallery-border-radius, 0, $gallery-border-radius);
+        // Top and Bottom left border radius
+        @include border-radius-custom($border-radius, 0, 0, $border-radius);
       }
     }
 
-    &.gallery-section-right{
+    &.gallery-section-right {
       @include breakpoint($max-breakpoint) {
         border-left: 1px dotted $dottet-border-color; 
         border-bottom-left-radius: 0px;
-        // Top and Bottom left border radius
-        @include border-radius-custom($gallery-border-radius, 0, $gallery-border-radius, 0);
+        // Top and Bottom right border radius
+        @include border-radius-custom(0, $border-radius , $border-radius, 0);
       }
     }
   

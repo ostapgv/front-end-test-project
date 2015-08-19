@@ -1,17 +1,12 @@
-.sidebar-right-aside{
+.sidebar-right-aside {
   min-width: $sidebar-min-width;
   float: right;
+  width: 100%;
 
   // Changing float to the "left" if screen width is less than $sidebar-min-width + paddings
   @include breakpoint(max-width $sidebar-min-width + 2*$sidebar-padding) {
     float: left;
-  } 
-
-  // 100% width in small devices
-  @include breakpoint($min-breakpoint) {
-    width: 100%;
-    //background-color: red;
-  } 
+  }
 
   // fixed width in tablets asnd desctops
   @include breakpoint($max-breakpoint) {
@@ -21,26 +16,25 @@
 
 }
 
-.sidebar{
+.sidebar {
   background-color : $background-color;
-  border-radius: 8px;
-  behavior: url(/pie/PIE.htc);
+  @include border-radius-value($border-radius);
   
-  .sidebar-heading{
+  .sidebar-heading {
     color: $header-color;
     size: 12pt;
     padding-left: 10px;
     padding-top: 20px;
   }
   
-  .sidebar-dotted{
+  .sidebar-dotted {
     border: 1px dotted $dottet-border-color; 
     border-style: none none dotted; 
     color: $background-color; 
     background-color: $background-color;
   }
   
-  .sidebar-content{
+  .sidebar-content {
     padding: 0px 10px 10px 10px; 
     color: $content-color;
   
@@ -54,7 +48,7 @@
       vertical-align: middle;
     }
   
-    span{
+    span {
       padding-right: 10px;
     }
   }// .sidebar-content

@@ -1,11 +1,11 @@
 // border-radius prop with IE8 support
-@mixin border-radius-value($value){
+@mixin border-radius-value($value) {
   	border-radius: $value;
  	behavior: url(/pie/PIE.htc);
 }
 
 // border-radius custom parameters with IE8 support
-@mixin border-radius-custom($top-left, $top-right, $bottom-left, $bottom-right){
+@mixin border-radius-custom($top-left, $top-right, $bottom-left, $bottom-right) {
   	border-radius: $top-left $top-right $bottom-left $bottom-right;
  	behavior: url(/pie/PIE.htc);
 }
