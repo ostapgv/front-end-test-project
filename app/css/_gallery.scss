@@ -17,11 +17,12 @@ $gallery-link-color: $background-header-color;
 
 
 .gallery{
-  min-width: $min-width;
-  behavior: url(/pie/PIE.htc);
+    min-width: $min-width;
+    
   & .gallery-section{
     background-color : $background-color;
     border-radius: $gallery-border-radius;
+    behavior: url(/pie/PIE.htc);
       
     @include breakpoint($max-breakpoint) {
       width: $max-breakpoint/2 - $gallery-padding;
@@ -29,11 +30,15 @@ $gallery-link-color: $background-header-color;
     } 
 
     & .gallery-heading-left{
-      border-top-left-radius: $gallery-border-radius;
+      // Top left border radius
+      border-radius: $gallery-border-radius 0 0 0;
+      behavior: url(/pie/PIE.htc);
     }
     
     & .gallery-heading-right{
-      border-top-right-radius: $gallery-border-radius;
+      // Top left border radius
+      border-radius: 0 $gallery-border-radius 0 0;
+      behavior: url(/pie/PIE.htc);
     }
 
     & .gallery-heading{
@@ -42,10 +47,11 @@ $gallery-link-color: $background-header-color;
       color: $header-color;
       padding-left: $gallery-padding;
       padding-top: 30px;
-      
+
       @include breakpoint($min-breakpoint) {
-        border-top-left-radius: $gallery-border-radius;
-        border-top-right-radius: $gallery-border-radius;
+        // Top left and top right border radius
+        border-radius: $gallery-border-radius $gallery-border-radius 0 0;
+        behavior: url(/pie/PIE.htc);
       } 
     }
 
@@ -76,14 +82,19 @@ $gallery-link-color: $background-header-color;
     
     &.gallery-section-left{
       @include breakpoint($max-breakpoint) {
-        border-bottom-right-radius: 0px;
+        // Top and Bottom right border radius
+        border-radius: 0 $gallery-border-radius 0 $gallery-border-radius;
+        behavior: url(/pie/PIE.htc);
       }
     }
 
     &.gallery-section-right{
       @include breakpoint($max-breakpoint) {
-        border-bottom-left-radius: 0px;
         border-left: 1px dotted $dottet-border-color; 
+        border-bottom-left-radius: 0px;
+        // Top and Bottom left border radius
+        border-radius: $gallery-border-radius 0 $gallery-border-radius 0;
+        behavior: url(/pie/PIE.htc);
       }
     }
   

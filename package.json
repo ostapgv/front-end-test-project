@@ -30,14 +30,11 @@
     "gulp-sourcemaps": "^1.5.0",
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^1.1.1",
-    "jquery": "^2.1.4",
     "jshint-stylish": "^1.0.1",
     "main-bower-files": "^2.5.0",
     "opn": "^1.0.1",
     "through2": "~0.6.3",
     "wiredep": "^2.2.2"
   },
-  "dependencies": {
-    "jquery": "^2.1.4"
-  }
+  "dependencies": {}
 }
