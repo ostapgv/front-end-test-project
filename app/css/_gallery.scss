@@ -19,29 +19,26 @@ $gallery-link-color: $background-header-color;
 .gallery{
     min-width: $min-width;
     
-  & .gallery-section{
+  .gallery-section{
     background-color : $background-color;
-    border-radius: $gallery-border-radius;
-    behavior: url(/pie/PIE.htc);
+    @include border-radius-value($gallery-border-radius);
       
     @include breakpoint($max-breakpoint) {
       width: $max-breakpoint/2 - $gallery-padding;
       float: left;
     } 
 
-    & .gallery-heading-left{
+    .gallery-heading-left{
       // Top left border radius
-      border-radius: $gallery-border-radius 0 0 0;
-      behavior: url(/pie/PIE.htc);
+      @include border-radius-custom($gallery-border-radius, 0, 0, 0);
     }
     
-    & .gallery-heading-right{
+    .gallery-heading-right{
       // Top left border radius
-      border-radius: 0 $gallery-border-radius 0 0;
-      behavior: url(/pie/PIE.htc);
+      @include border-radius-custom(0, $gallery-border-radius, 0, 0);
     }
 
-    & .gallery-heading{
+    .gallery-heading{
       background-color : $background-header-color;
       height: $gallery-heading-height; 
       color: $header-color;
@@ -50,28 +47,27 @@ $gallery-link-color: $background-header-color;
 
       @include breakpoint($min-breakpoint) {
         // Top left and top right border radius
-        border-radius: $gallery-border-radius $gallery-border-radius 0 0;
-        behavior: url(/pie/PIE.htc);
+        @include border-radius-custom($gallery-border-radius, $gallery-border-radius, 0, 0);
       } 
     }
 
-    & .gallery-container{
+    .gallery-container{
       padding: $gallery-padding;
       height: $gallery-container-height;
       
-      & .gallery-img-container{
+      .gallery-img-container{
         float: left;
         
-        & img{
+        img{
           border: 1px solid $gallery-img-border-color;
           margin: $gallery-img-margin;
         }        
       }
       
-      & .gallery-content {
+      .gallery-content {
         margin-left: $gallery-img-width + 2*$gallery-img-margin;
         
-        & .gallery-details a{
+        .gallery-details a{
           color: $gallery-link-color;
           text-decoration: none;
         }
@@ -83,8 +79,7 @@ $gallery-link-color: $background-header-color;
     &.gallery-section-left{
       @include breakpoint($max-breakpoint) {
         // Top and Bottom right border radius
-        border-radius: 0 $gallery-border-radius 0 $gallery-border-radius;
-        behavior: url(/pie/PIE.htc);
+        @include border-radius-custom(0, $gallery-border-radius, 0, $gallery-border-radius);
       }
     }
 
@@ -93,8 +88,7 @@ $gallery-link-color: $background-header-color;
         border-left: 1px dotted $dottet-border-color; 
         border-bottom-left-radius: 0px;
         // Top and Bottom left border radius
-        border-radius: $gallery-border-radius 0 $gallery-border-radius 0;
-        behavior: url(/pie/PIE.htc);
+        @include border-radius-custom($gallery-border-radius, 0, $gallery-border-radius, 0);
       }
     }
   
