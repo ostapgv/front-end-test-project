@@ -1,21 +1,19 @@
 // bower:scss
 // endbower
 
-//body:before {
-  //content: "I'm at 'app/css/main.scss";
-//}
-
-
 body {
   background-color : $body-background-color;
   padding: $sidebar-padding;
+  
+  .main-container {
+    @include breakpoint($full-width-breakpoint) {
+      width: $full-width-breakpoint;
+      margin: 0 auto;
+    } 
+  }
+  
 }
 
 .bold {
   font-weight: bold;
-}
-
-.test-task-links {
-  // test bourbon working check
-  @include linear-gradient(to top, red, orange);
 }

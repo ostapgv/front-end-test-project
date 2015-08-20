@@ -75,7 +75,9 @@ $gallery-link-color: $background-header-color;
     }//.gallery-container
     
     &.gallery-section-left {
+      margin-bottom: $gallery-padding;
       @include breakpoint($max-breakpoint) {
+        margin-bottom: 0;
         // Top and Bottom left border radius
         @include border-radius-custom($border-radius, 0, 0, $border-radius);
       }
