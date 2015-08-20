@@ -1,4 +1,4 @@
 //Devices with screen resolution >= 640px 
 $max-breakpoint: 640px;
 //All devices after the point, where the screen resolution > all content width
-$full-width-breakpoint: $max-breakpoint + $sidebar-min-width + $sidebar-padding;
+$full-width-breakpoint: $max-breakpoint + $min-width + 2*$common-padding;

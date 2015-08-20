@@ -1,38 +1,20 @@
-
-$header-color: #FFF;
-$background-header-color: #E61052;
-$content-color: #97866F;
-$background-color: #FFF;
-$dottet-border-color: #D9CBB6;
-$min-width : 300px;
-$gallery-container-height: 250px;
-$gallery-heading-height: 50px;
-$gallery-padding: 10px;
-
-$gallery-img-margin: 10px;
-$gallery-img-width: 98px;
-$gallery-img-border-color: #EAE1D4;
-$gallery-link-color: $background-header-color;
-
-
 .gallery {
-    min-width: $min-width;
+  min-width: $min-width;
     
   .gallery-section {
-    background-color : $background-color;
+    margin-bottom: $common-margin;
+    background-color : $block-background-color;
     @include border-radius-value($border-radius);
-      
+
     @include breakpoint($max-breakpoint) {
-      width: $max-breakpoint/2 - $gallery-padding;
+      width: $max-breakpoint/2 - $common-padding;
       float: left;
-    } 
+    }
 
     .gallery-heading {
-      background-color : $background-header-color;
-      height: $gallery-heading-height; 
-      color: $header-color;
-      padding-left: $gallery-padding;
-      padding-top: 30px;
+      background-color : $gallegy-background-header-color;
+      color: $gallegy-header-color;
+      padding: 3 * $common-padding $common-padding;
 
       &.gallery-heading-left {
         @include border-radius-custom($border-radius, $border-radius, 0, 0);
@@ -50,7 +32,7 @@ $gallery-link-color: $background-header-color;
     }
 
     .gallery-container {
-      padding: $gallery-padding;
+      padding: $common-padding;
       height: $gallery-container-height;
       
       .gallery-img-container {
@@ -75,7 +57,7 @@ $gallery-link-color: $background-header-color;
     }//.gallery-container
     
     &.gallery-section-left {
-      margin-bottom: $gallery-padding;
+      margin-bottom: $common-margin;
       @include breakpoint($max-breakpoint) {
         margin-bottom: 0;
         // Top and Bottom left border radius
@@ -85,7 +67,10 @@ $gallery-link-color: $background-header-color;
 
     &.gallery-section-right {
       @include breakpoint($max-breakpoint) {
+        // reducing the 1px of the width and adding 1px dotted berder 
+        width: $max-breakpoint/2 - $common-padding - 1px;
         border-left: 1px dotted $dottet-border-color; 
+        
         border-bottom-left-radius: 0px;
         // Top and Bottom right border radius
         @include border-radius-custom(0, $border-radius , $border-radius, 0);
